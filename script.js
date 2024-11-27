@@ -1,10 +1,15 @@
 const addBtn = document.querySelector("#addNamesBtn");
-const nameBar = document.querySelector("#bartoInsrNames");
-const testing = document.querySelector("#teste")
+const nameBar = document.querySelector("#barToInsrNames");
+const divNames = document.querySelector("#names")
+const namesList = []
 addBtn.addEventListener("click", () => {
     addBtn.style.color  = "red"
-    const nameValue = nameBar.value;
-    testing.textContent = '${nameValue}'
+    divNames.innerHTML += `<p> ${nameBar.value}</p>`
+    namesList.push(nameBar.value)
+    nameBar.textContent = ""
 });
-console.log(namevalue)
-// console.log(testing)
+console.log(namesList)
+
+function printnames(name){
+    
+}
