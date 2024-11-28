@@ -43,10 +43,19 @@ body{
     border: none;
 }
 #names{
-    padding: 15px 0;
+    padding: 15px;
     background-color: #02343A;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
+}
+.nameAndTrash{
+    display: flex;
+    align-items:center;
+    padding: 8px;
+    justify-content:space-between ;
 }
 #generateWinner{
     background-color: #42A940;
