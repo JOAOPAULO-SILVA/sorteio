@@ -64,6 +64,29 @@ body{
     height: 7vh;
     border-radius: 5px;
 }
+#modal{
+    background-color: #02343A;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-content: center;
+    border: none;
+    border-radius: 5px;
+    width: 30%;
+    height: 30%;
+    font-size: 30px;
+}
+#winnerName{
+    background-color: #2F595E;
+    text-align: center;
+    width: 85%;
+    margin-top: 5%;
+    border-radius: 5px;
+    padding: 15px;
+}
+/* modal::backdrop{
+    background-color: black;
+} */
 
 @media (max-width:700px ){
     #main{

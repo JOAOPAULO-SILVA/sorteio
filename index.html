@@ -13,18 +13,21 @@
         <p>Adicione os nomes para sortear o ganhador</p>
         <section id="addNames">
             <!-- barra de texto -->
-                <input type="text" id="barToInsrNames" placeholder="Adicione os participantes">
+            <input type="text" id="barToInsrNames" placeholder="Adicione os participantes">
             <!-- botão -->
-                <button id="addNamesBtn">Adicionar</button>
+            <button id="addNamesBtn">Adicionar</button>
         </section>
         <section id="names">
             <!-- seção que fica os nomes já adcionados -->
         </section>
-        <body>
-            <button id="generateWinner">Gerar Vencedor</button>
-            <script src="./script.js"></script>
-        </body>
+        <button id="generateWinner">Gerar Vencedor</button>
     </section>
+        <dialog id="modal">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <p>O Vencedor é: </p>
+            <p id="winnerName">a</p>
+        </dialog>
 
+    <script src="./script.js"></script>
 </body>
 </html>
