@@ -12,7 +12,7 @@ body{
     flex-direction: column;
     margin-top: 4rem;
     background-color: #2F595E;
-    width: 600px;
+    width: clamp(700px, 50vw, 900px);
     padding: 2rem;
     border-radius: 5px;
     gap: 2vh;
@@ -20,24 +20,31 @@ body{
     color: white;
 }
 #addNames{
-    padding:10px;
+    padding: 1.5em 1em;
     display: flex;
     background-color: #02343A;
     justify-content: space-around;
     border-radius: 5px;
 }  
-#barToInsrNames{
-    height: 2rem;
-    width: 100%;
-    border: none;
+#typeBar{
+    height: 3rem;
+    width: 80%;
+    /* border: none; */
     border-radius: 5px;
     background-color: #2F595E;
     text-align: center;
     outline: none;
 }
+#typeBar.normal{
+    border: none;
+}
+#typeBar.error{
+    border-color: red;
+}
 #addNamesBtn{
     background-color: #42A940;
     color: white;
+    width: 15%;
     padding: 3px;
     border-radius: 5px;
     border: none;
@@ -65,24 +72,25 @@ body{
     border-radius: 5px;
 }
 #modal{
-    background-color: #02343A;
+    background-color: #025940;
+    color: #ffffff;
     align-self: center;
     justify-self: center;
     justify-items: center;
     align-content: center;
     border: none;
     border-radius: 5px;
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 35%;
     font-size: 30px;
 }
 #winnerName{
-    background-color: #2F595E;
+    background-color: #28725C;
     text-align: center;
     width: 85%;
     margin-top: 5%;
     border-radius: 5px;
-    padding: 15px;
+    padding: 15px;  
 }
 /* modal::backdrop{
     background-color: black;
@@ -96,7 +104,12 @@ body{
         flex-direction: column;
         gap: 10px;
     }
+    #typeBar{
+        width: 100%;
+    }
     #addNamesBtn{
         height: 7vh;
+        width: 100%;
     }
+    
 }
