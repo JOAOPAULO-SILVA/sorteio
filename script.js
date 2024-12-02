@@ -81,3 +81,5 @@ divNames.addEventListener("click", (event) => {
         }
     }
 });
+
+//precisso adicionar a função de remover nomes da lista (parece bem simples)
