@@ -13,7 +13,7 @@ const namesList = []
 function printnames(name){
     const html = `<section class="allNameSection">
         <section class="nameAndTrash">
-            <p>${name}</p>
+            <p class="Textname">${name}</p>
             <i class="fa-solid fa-trash"></i>
         </section>  
         <hr>
@@ -68,7 +68,7 @@ winnerBtn.onclick = function () {
 addBtn.addEventListener("click", () => {
     if (verifyTypeContent()){
         divNames.innerHTML += printnames(nameBar.value)
-        namesList.push(nameBar.value)
+        namesList.push(nameBar.value.trim())
         nameBar.value = ""
     }
 });
@@ -76,10 +76,17 @@ addBtn.addEventListener("click", () => {
 divNames.addEventListener("click", (event) => {
     if (event.target.classList.contains("fa-trash")) {
         const nameSection = event.target.closest(".allNameSection");
+        const itemToRemove = event.target.closest(".nameAndTrash").textContent.trim();
+        console.log(itemToRemove);
         if (nameSection) {
+            const index = namesList.indexOf(itemToRemove)
+            console.log(`"${index}"`)
+            namesList.splice(index,1)
             nameSection.remove(); // Remove a seção inteira associada ao ícone do lixo
+            console.log(namesList)
         }
     }
 });
 
-//precisso adicionar a função de remover nomes da lista (parece bem simples)
+//preciso adicionar a função de remover nomes da lista (parece bem simples)
+//preciso adicionar a animação de carregando e a animação do modal

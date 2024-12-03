@@ -95,6 +95,20 @@ body{
 /* modal::backdrop{
     background-color: black;
 } */
+ .fa-spinner{
+    justify-self: center;
+    width: 20px;
+    animation: spin 1s linear infinite;
+
+ }
+.loaderSection{
+    width: 50%;
+    height: 8vh;
+    background-color: #2F595E;
+    justify-items : center;
+    align-content: center;
+    padding: 10px;
+}
 
 @media (max-width:700px ){
     #main{
@@ -112,4 +126,13 @@ body{
         width: 100%;
     }
     
+}
+
+@keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+    }
 }
