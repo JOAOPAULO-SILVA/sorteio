@@ -84,6 +84,9 @@ body{
     height: 35%;
     font-size: 30px;
 }
+/*#closeModal{
+    border: #ffffff;
+}*/
 #winnerName{
     background-color: #28725C;
     text-align: center;
