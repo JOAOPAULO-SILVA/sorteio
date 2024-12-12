@@ -4,9 +4,8 @@ const divNames = document.querySelector("#names")
 const winnerBtn = document.querySelector("#generateWinner")
 const modal = document.querySelector("dialog")
 const winnerName = document.querySelector("#winnerName")
-//const trashBtn = document.querySelector(".fa-solid .fa-trash")
+const loadSection = document.querySelector(".loaderSection")
 const namesList = []
-
 
 
 //função que faz mostrar os nomes ja cadastrados
@@ -33,8 +32,8 @@ function verifyTypeContent(){
     if (nameBar.value != ""){
         return true
     } else { 
+        console.log("não há conteudo para ser adicionado")
         error()
-        verifyNames()
         return false
     }
 }
@@ -43,10 +42,10 @@ function verifyNames(){
     names = divNames.childNodes.length
     if (names == 0){
         error()
+        console.log("não há nomes para sortear")
     }else {return true}
 }
 function error(){
-    console.log("oi")
     nameBar.classList.remove("normal")
     nameBar.classList.add("error")
 }
@@ -57,7 +56,12 @@ nameBar.addEventListener("click", () =>{
 
 winnerBtn.onclick = function () {
     if (verifyNames()){
-        modal.showModal()
+        console.log(loadSection)
+        loadSection.style.display = "block"
+        setTimeout(function(){
+            // loadSection.style.display = "none"
+            modal.showModal()
+        },1500)
         console.log(namesList)
         winnerName.textContent = setWinner(namesList)
         console.log(winnerName.textContent)
