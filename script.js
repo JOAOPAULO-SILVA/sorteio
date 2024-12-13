@@ -8,6 +8,7 @@ const loadSection = document.querySelector(".loaderSection")
 const namesList = []
 const exitModal = document.querySelector("#closeModal")
 
+console.log(modal)
 //função que faz mostrar os nomes ja cadastrados
 function printnames(name){
     const html = `<section class="allNameSection">
@@ -57,7 +58,7 @@ winnerBtn.onclick = function () {
         console.log(loadSection)
         loadSection.style.display = "block"
         setTimeout(function(){
-            // loadSection.style.display = "none"
+            loadSection.style.display = "none"
             modal.showModal()
         },1500)
         console.log(namesList)

@@ -19,20 +19,22 @@
         </section>
         <section id="names"></section>
         <button id="generateWinner">Gerar Vencedor</button>
+        <section class="loaderSection">
+            <section>
+                <i class="fa-solid fa-spinner fa-spin" style="--fa-animation-duration: 1s"></i>
+            </section>
+        </section>
     </section>
     <section>
         <dialog id="modal">
-            <i class="fa-solid fa-right-from-bracket" id="closeModal"></i>
+            <section id="imageSection">
+                <i class="fa-solid fa-right-from-bracket" id="closeModal"></i>
+            </section>
             <p>O Vencedor é: </p>
-            <p id="winnerName">a</p>
+            <p id="winnerName"></p>
         </dialog> 
+        <script src="./script.js"></script>
     </section>
     <!-- loading -->
-    <section class="loaderSection">
-        <section>
-            <i class="fa-solid fa-spinner fa-spin" style="--fa-animation-duration: 1s"></i>
-        </section>
-    </section>
-    <script src="./script.js"></script>
 </body>
 </html>
